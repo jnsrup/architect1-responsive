@@ -28,6 +28,20 @@ color: #727272;
 .accent-bg{
     background-color: #fff4e7;
 }
+/* global styles  */
+.section-title{
+    font-size: 2.8125rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+.section-description{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #727272;
+    max-width:540px ;
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
 /* display-flex */
 .display-flex{
     display: flex;
@@ -74,6 +88,7 @@ color: #727272;
 
 
 }
+/* Button styles */
 .btn-primary{
     background-color: #FF900E;
     font-size:1.2rem;
@@ -84,14 +99,221 @@ color: #727272;
     font-weight: 600;
 
 }
+.btn-secondery{
+    background-color: #FF900E;
+    font-size:1.5625rem;
+    color: white;
+    padding:46px 42px;
+    border: none;
+    border-radius:5px;
+    font-weight: 600;
+    margin-top: -120px;
+    margin-left: -100px;
+
+}
 .banner-image{
     width: 100%;
+    margin-bottom: 40px;
 }
-/* navbar responsive  */
+
+/* main Area styles */
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main section{
+    margin-top: 130px;
+}
+.teams{
+    align-items: center;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+.our-features{
+    margin-left: 130px;
+    max-width: 530px;
+}
+/* Facts related styles */
+.section-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+.fact-card{
+    border: solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.fact-number{
+    font-size: 2.28rem;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    color: #424242;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #727272;
+    margin-top: 5px;
+}
+/* Features you will love & enjoy related styles */
+.features-love{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 150px;
+}
+.features-border{
+    border-left: solid 5px #FF900E;
+    padding-left: 20px;
+
+
+}
+.card-title{
+   
+    font-size: 1.25rem;
+    margin: 10px;
+
+}
+.features-love-card{
+    box-shadow: 0 4px 30px  rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 586px;
+    border-radius: 8px;
+
+}
+
+#years{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+/* sponsors related styles  */
+.sponsors{
+  justify-items: center;
+  text-align: center;
+}
+.sponsors-image{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    filter: grayscale(100%);
+    
+    
+}
+/* copyright */
+footer{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.copyright{
+    color: #424242;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px 0 ;
+    border-radius: 8px;
+    margin: 130px 0px 230px 0px;
+}
+
+
+/* mobile size navbar and main responsive  */
 @media screen and (max-width:576px) {
-    .navbar, .nav-link{
+    .navbar,
+    .nav-link,
+    .teams,
+    .section-container
+    {
     flex-direction: column;
     }
-
+    .team-img-container, 
+    .section-container, 
+    .features-love {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .our-features, .some-facts-content{
+        margin-left: 50px;
+    }
+    .section-container{
+        justify-items: center;
+        gap: 50px;
+    }
+ .sponsors-image{
     
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    justify-items: center;
+    
+}
+
+
+.btn-secondery{
+    background-color: #FF900E;
+    font-size:1.5625rem;
+    color: white;
+    padding:46px 42px;
+    border: none;
+    border-radius:5px;
+    font-weight: 600;
+    margin: 10px;
+    
+
+}
+.features-love-img img{
+ width: 100%;
+ 
+}
+.features-love-card{
+    width: 80%;
+    
+}
+
+
+}
+
+
+
+/* medium size responsive */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .teams{ flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
+    }
+  .team-img-container, .section-container, .sponsors-image {
+        grid-template-columns: repeat(2,2fr);
+        gap: 50px;
+        justify-items: center;
+}
+
+.some-facts-content{
+    margin-left: 80px;
+}
+.features-love {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .features-love-img img{
+ width: 100%;
+ 
+}
+.features-love-card{
+    width: 80%;
+    justify-content: center;
+}
+.btn-secondery{
+    margin: 20px;
+}
+.fratures-love-text{
+    margin-left: 60px;
+}
+
+
 }
